@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="datepicker-container">
+    <!-- Phần Input Group -->
+    <div class="input-wrapper">
+        <input type="text" id="dateInput" placeholder="dd / mm / yyyy" readonly>
+        <button id="calendarBtn" type="button">
+            <span class="icon">📅</span>
+        </button>
+    </div>
+
+    <!-- Phần Popup Calendar (Mặc định ẩn) -->
+    <div id="calendarPopup" class="calendar-popup hidden">
+        <div class="calendar-header">
+            <button class="nav-btn">&lt;</button>
+            <span class="current-month">December 2022</span>
+            <button class="nav-btn">&gt;</button>
+        </div>
+        
+        <div class="calendar-weekdays">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+        </div>
+        
+        <div class="calendar-days" id="daysGrid">
+            <!-- Ô trống cho những ngày thuộc tháng trước -->
+            <div class="empty"></div><div class="empty"></div><div class="empty"></div>
+            <div class="empty"></div>
+            <!-- Các ngày trong tháng -->
+            <button class="day">1</button><button class="day">2</button><button class="day">3</button>
+            <!-- ... tiếp tục đến 31 ... -->
+            <button class="day">31</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
